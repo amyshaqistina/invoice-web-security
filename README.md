@@ -111,6 +111,9 @@ Techniques Used:
 - Password hashing and verification using Laravel’s Hash facade  
 - Confirmation modals for destructive actions  
 - Rate limiting to prevent automated abuse
+- Eloquent (already implemented before these security enhancements)
+- ->Auth (already implemented before these security enhancements)
+- Required() (already implemented before these security enhancements)
 
 
 ---
@@ -159,21 +162,23 @@ Authorization ensures users only access permitted resources.
 To prevent **SQL Injection**, the following enhancements were implemented:
 
 **Methods Used:**
-
+-Privileges Restricted
+-Elequont (already implemented before these security enhancements)
 
 **Outcome:**
-
+-Exclusive User can update, delete, and access the database (admin only)
 
 ---
 
 ### 6️⃣ File Security Principles
-To prevent file leaks and unauthorized access:
+To prevent file leaks and unauthorised access:
 
 **Techniques Implemented:**
-
+-Isolation URL link
+-Spatie Laravel Permission RBAC ->CRUD ((already implemented before these security enhancements)
 
 **Outcome:**
-
+- Url link path cannot be seen(Hidden)
 
 ---
 
@@ -231,7 +236,7 @@ This table outlines the before-and-after enhancements made to the **Input Valida
 
 | **Security & Functionality Aspect**                | **Before Enhancement**                                                                                         | **After Enhancement**                                                                                                      | **Visual Representation**                                                                                                        |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| **IDOR & RBAC Applied for File Security**         | **Before:**<br>- **IDOR** (Insecure Direct Object References) and **RBAC** (Role-Based Access Control) applied for file security | **After:**<br>- **Isolated URL Links** for improved file access security<br>**Explanation:**<br>Pages involved: `Dashboard.php`, `Dashboard.blade.php` | **Before:** ![image](https://github.com/user-attachments/assets/649d2fb9-1993-48cd-afd2-71f150ad8714) <br> <img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/52197d12-37ac-41dc-8aad-43defe09f4aa" /> <br> **After:** <img width="975" height="457" alt="image" src="https://github.com/user-attachments/assets/bb01a24e-729d-4931-b7aa-f0f597808e04" /> |
+| **IDOR & RBAC Applied for File Security**         | **Before:**<br>- **IDOR** (Insecure Direct Object References) and **RBAC** (Role-Based Access Control) applied for file security | **After:**<br>- **Isolated URL Links** for improved file access security<br>**Explanation:**<br>Pages involved: `Dashboard.php`, `Dashboard.blade.php` <img width="975" height="855" alt="image" src="https://github.com/user-attachments/assets/2d6bc9cd-3306-4352-aa7c-b7b129e6725e" /> | **Before:** ![image](https://github.com/user-attachments/assets/649d2fb9-1993-48cd-afd2-71f150ad8714) <br> <img width="975" height="390" alt="image" src="https://github.com/user-attachments/assets/52197d12-37ac-41dc-8aad-43defe09f4aa" /> <br> **After:** <img width="975" height="457" alt="image" src="https://github.com/user-attachments/assets/bb01a24e-729d-4931-b7aa-f0f597808e04" /> |
 | **File Encryption and Access Control**            | **Before:**<br>- **File encryption** and **access control** were implemented                                       | **After:**<br>- **Client-Side Protection** for additional measures against unauthorized file access<br>- **Privilege-Restricted Security Layers** for a deeper level of protection | <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/31509717-0ad4-427a-9ffb-b9d1f9d853b5" /> |
 | **File Type Validation Added**                     | **Before:**<br>- **File type validation** added                                                                    | **After:**<br>- **Privilege-Restricted Security Layers** for a deeper level of protection<br>**Changes Involved:**<br>Editing `.env` file | <img width="305" height="177" alt="image" src="https://github.com/user-attachments/assets/406f2a4a-4de7-4119-850d-4ab3f6268c71" />
                                         |
@@ -240,7 +245,7 @@ This table outlines the before-and-after enhancements made to the **Input Valida
 
 | **Feature**                | **Before Enhancement**                                                                                         | **After Enhancement**                                                                                                      | **Visual Representation**                                                                                                        |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| **2FA Implementation**      | **Before:**<br>- Two-factor authentication (2FA) not implemented.                                                   | **After:**<br>- 2FA added via **SendOTP.php**, **.env file**, **admin panel profile.php**, and **User.php**.<br>**Explanation:**<br>Added OTP-based authentication for improved security. | <img width="941" height="443" alt="image" src="https://github.com/user-attachments/assets/da73f53d-fc3d-4a5b-a488-f1d67e332e5a" /> for sign up <img width="937" height="440" alt="image" src="https://github.com/user-attachments/assets/ff4e40e9-66dd-4386-a31d-e2ad49f81d09" /> |
+| **2FA Implementation**      | **Before:**<br>- Two-factor authentication (2FA) not implemented.                                                   | **After:**<br>- 2FA added via **SendOTP.php**, **.env file**, **admin panel profile.php**, and **User.php**.<br>**Explanation:**<br>Added OTP-based authentication for improved security. <img width="482" height="65" alt="image" src="https://github.com/user-attachments/assets/b697d776-1986-4e28-98bf-531c7db8a262" /> | <img width="941" height="443" alt="image" src="https://github.com/user-attachments/assets/da73f53d-fc3d-4a5b-a488-f1d67e332e5a" /> for sign up <img width="937" height="440" alt="image" src="https://github.com/user-attachments/assets/ff4e40e9-66dd-4386-a31d-e2ad49f81d09" /> |
 | **Audit Trail for User**    | **Before:**<br>- No logging for user actions.                                                                 | **After:**<br>- Implemented **Audit Trail** to track user activity for security and compliance purposes.<br>**Explanation:**<br>Records each user action for transparency and accountability. | <img width="1600" height="658" alt="image" src="https://github.com/user-attachments/assets/f36d4264-361e-48f2-a573-ac80f9794bfe" /> <img width="855" height="347" alt="image" src="https://github.com/user-attachments/assets/09acfa64-7d72-495a-aa49-0724ddd72311" /> |
 
 ---
