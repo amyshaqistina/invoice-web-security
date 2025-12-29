@@ -190,7 +190,7 @@ To prevent file leaks and unauthorised access:
 | - `RecentInvoiceTables.php`            | - `recentInvoices.blade.php`             | - `RecentInvoiceTable.php`             | **Isolation** |
 | - `RecurringInvoiceTable.php`          | - `recurringInvoices.blade.php`          | - `RecurringInvoiceTable.php`          | **Isolation** |
 | - `RecentPaymentTable.php`             | - `recentPayments.blade.php`             | - `RecentPaymentTable.php`             | **Isolation** |
-| - `CustomerResource.php`            | - `recentInvoices.blade.php`             | - `RecentInvoiceTable.php`             | **Isolation** |
+| - `Customer.php`            | - `.blade.php`             | - `CustomerResource.php`             | **Isolation** |
 | - `2fa.php`                            | - `2fa.blade.php`                        | - `SendOtp.php`<br>- `AdminPanelProvider.php` | **2FA** |
 
 # Table of Security and Functionality Enhancements.
