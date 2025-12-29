@@ -162,11 +162,11 @@ Authorization ensures users only access permitted resources.
 To prevent **SQL Injection**, the following enhancements were implemented:
 
 **Methods Used:**
--Privileges Restricted
--Elequont (already implemented before these security enhancements)
+- Privileges Restricted
+- Elequont (already implemented before these security enhancements)
 
 **Outcome:**
--Exclusive User can update, delete, and access the database (admin only)
+- Exclusive User can update, delete, and access the database (admin only)
 
 ---
 
@@ -174,8 +174,8 @@ To prevent **SQL Injection**, the following enhancements were implemented:
 To prevent file leaks and unauthorised access:
 
 **Techniques Implemented:**
--Isolation URL link
--Spatie Laravel Permission RBAC ->CRUD ((already implemented before these security enhancements)
+- Isolation URL link
+- Spatie Laravel Permission RBAC ->CRUD ((already implemented before these security enhancements)
 
 **Outcome:**
 - Url link path cannot be seen(Hidden)
