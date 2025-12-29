@@ -186,12 +186,11 @@ To prevent file leaks and unauthorised access:
 
 | **Model**                               | **View**                                 | **Controller**                         | **Enhancement Technique**                                                       |
 |-----------------------------------------|------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------|
-| - `RecentInvoiceTables.php`<br>- `Overview.php` | - `dashboard.blade.php`<br>- `overview.blade.php` | - `dashboard.php`<br>- `Statsoverview.php` | **Isolation**: Segregated widget components for better modularity.<br>**2FA**: Added two-factor authentication for admin access. |
-| - `RecentInvoiceTables.php`            | - `recentInvoices.blade.php`             | - `RecentInvoiceTable.php`             | **Isolation**: Isolated data fetching logic for **invoice data**.<br>**2FA**: Ensured secure access for viewing invoice details. |
-| - `RecurringInvoiceTable.php`          | - `recurringInvoices.blade.php`          | - `RecurringInvoiceTable.php`          | **Isolation**: Separate logic for recurring invoice tracking.<br>**2FA**: Two-factor authentication for secure recurring billing access. |
-| - `RecentPaymentTable.php`             | - `recentPayments.blade.php`             | - `RecentPaymentTable.php`             | **Isolation**: Modular approach for payment tracking.<br>**2FA**: 2FA added for verifying payment details. |
-| - `2fa.php`                            | - `2fa.blade.php`                        | - `SendOtp.php`<br>- `AdminPanelProvider.php` | **2FA**: Implemented **two-factor authentication** for enhanced security. |
-
+| - `RecentInvoiceTables.php`<br>- `Overview.php` | - `dashboard.blade.php`<br>- `overview.blade.php` | - `dashboard.php`<br>- `Statsoverview.php` | **Isolation** |
+| - `RecentInvoiceTables.php`            | - `recentInvoices.blade.php`             | - `RecentInvoiceTable.php`             | **Isolation** |
+| - `RecurringInvoiceTable.php`          | - `recurringInvoices.blade.php`          | - `RecurringInvoiceTable.php`          | **Isolation** |
+| - `RecentPaymentTable.php`             | - `recentPayments.blade.php`             | - `RecentPaymentTable.php`             | **Isolation** |
+| - `2fa.php`                            | - `2fa.blade.php`                        | - `SendOtp.php`<br>- `AdminPanelProvider.php` | **2FA** |
 
 # Table of Security and Functionality Enhancements.
 
