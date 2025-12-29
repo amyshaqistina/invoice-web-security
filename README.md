@@ -182,6 +182,17 @@ To prevent file leaks and unauthorised access:
 
 ---
 
+# List of Files Modification Model, View, Controller, and Enhancement Techniques
+
+| **Model**                               | **View**                                 | **Controller**                         | **Enhancement Technique**                                                       |
+|-----------------------------------------|------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------|
+| - `RecentInvoiceTables.php`<br>- `Overview.php` | - `dashboard.blade.php`<br>- `overview.blade.php` | - `dashboard.php`<br>- `Statsoverview.php` | **Isolation**: Segregated widget components for better modularity.<br>**2FA**: Added two-factor authentication for admin access. |
+| - `RecentInvoiceTables.php`            | - `recentInvoices.blade.php`             | - `RecentInvoiceTable.php`             | **Isolation**: Isolated data fetching logic for **invoice data**.<br>**2FA**: Ensured secure access for viewing invoice details. |
+| - `RecurringInvoiceTable.php`          | - `recurringInvoices.blade.php`          | - `RecurringInvoiceTable.php`          | **Isolation**: Separate logic for recurring invoice tracking.<br>**2FA**: Two-factor authentication for secure recurring billing access. |
+| - `RecentPaymentTable.php`             | - `recentPayments.blade.php`             | - `RecentPaymentTable.php`             | **Isolation**: Modular approach for payment tracking.<br>**2FA**: 2FA added for verifying payment details. |
+| - `2fa.php`                            | - `2fa.blade.php`                        | - `SendOtp.php`<br>- `AdminPanelProvider.php` | **2FA**: Implemented **two-factor authentication** for enhanced security. |
+
+
 # Table of Security and Functionality Enhancements.
 
 This table outlines the before-and-after enhancements made to the **Input Validation**, **Authentication**, **Authorization**, **XSS and CSRF Prevention**, **Database Security**, and **File Security** within the context of a Laravel Filament V3 project.
