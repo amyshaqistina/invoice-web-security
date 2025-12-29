@@ -1,0 +1,19 @@
+@import '../../../../../vendor/filament/filament/resources/css/theme.css';
+
+@config './tailwind.neumorphism.config.js';
+
+.fi-sidebar-nav{
+    border-radius: 80px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  5px 5px 10px #a8a8a8,
+                 -5px -5px 10px #ffffff;
+             overflow-x: visible;
+             overflow-y: visible;
+}
+
+.fi-sidebar-item{
+    border-radius: 10px;
+background: linear-gradient(145deg, #ffffff, #e6e6e6);
+box-shadow:  5px 5px 38px #e3e3e3,
+             -5px -5px 38px #ffffff;
+}

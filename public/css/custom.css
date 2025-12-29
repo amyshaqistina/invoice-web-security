@@ -1,0 +1,17 @@
+
+body.login-page {
+    /*background-image: url("'.url('/assets/background.jpg').'"); */
+    background-image: url("../assets/bg1.jpg") ;
+    background-size: cover
+    }
+
+
+.login-page .fi-simple-main{
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+.dark .login-page .fi-simple-main {
+    background-color: rgba(0, 0, 0, 0.36) !important;
+    }
+
+    
