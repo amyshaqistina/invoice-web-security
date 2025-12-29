@@ -46,9 +46,13 @@ FOLLOW THIS STEPS:
 8. php artisan storage:link
 9. php artisan key:generate
 9. php artisan migrate:fresh --seed
-10. php artisan serve
-11. run php artisan optimize:clear, run php artisan icon: cache 
-12. default log in email👇🏻
+10. php artisan config:clear
+11. php artisan route:clear
+12. php artisan view:clear
+13. php artisan cache:clear
+14. php artisan serve
+15. run php artisan optimize:clear, run php artisan icon: cache 
+16. default log in email👇🏻
 - email => superadmin@test.com
 - password => superadmin1234
 
