@@ -10,11 +10,33 @@ class Customer extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $guarded = [];
+
+    // REPLACE THIS LINE:
+    // protected $guarded = [];
+
+    // WITH THIS:
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'address',
+        'city',
+        'state',
+        'zip_code',
+        'country',
+        'website',
+        'notes',
+        'attachment',
+        'team_id',
+        'created_by',
+    ];
 
     protected $casts = [
-        'attachment' => 'array', // Converts JSON to array automatically
-    ];
+    'attachment' => 'array',
+    'balance' => 'decimal:2',      // Cast to decimal with 2 places
+    'paid_to_date' => 'decimal:2', // Cast to decimal with 2 places
+    'last_login' => 'datetime',    // Ensure proper date handling
+];
 
     public function team()
     {
