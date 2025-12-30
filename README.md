@@ -127,6 +127,7 @@ Techniques Used:
 - Sessions data tracking (login/logout time & last_activity time)
 - Session timeout after inactivity
 - Audit trail (store activity log)
+- step-up verification
 
 
 
@@ -192,6 +193,20 @@ To prevent file leaks and unauthorised access:
 | - `RecentPaymentTable.php`             | - `recentPayments.blade.php`             | - `RecentPaymentTable.php`             | **Isolation** |
 | - `Customer.php`            | - `.blade.php`             | - `CustomerResource.php`             | **Isolation** |
 | - `2fa.php`                            | - `2fa.blade.php`                        | - `SendOtp.php`<br>- `AdminPanelProvider.php` | **2FA** |
+| - —                      | - Delete Confirmation Modal      | - `PasswordProtectedDeleteAction.php`         | **Password Confirmation (Delete)**      |
+| - —                      | - Bulk Delete Confirmation Modal | - `PasswordProtectedDeleteBulkAction.php`     | **Password Confirmation (Bulk Delete)** |
+| - —                      | - Export Confirmation Modal      | - `PasswordProtectedExportAction.php`         | **Password Confirmation (Export)**      |
+| - —                      | - —                              | - `RequiresPasswordConfirmation.php`          | **Reusable Security Control**           |
+| - `User.php`             | - `UserResource.php`             | - `UserResource.php`             | **Password-Protected Delete**               |
+| - `Customer.php`         | - `CustomerResource.php`         | - `CustomerResource.php`         | **Password-Protected Delete & Export**      |
+| - `Invoice.php`          | - `InvoiceResource.php`          | - `InvoiceResource.php`          | **Password-Protected Bulk Delete**          |
+| - `Payment.php`          | - `PaymentResource.php`          | - `PaymentResource.php`          | **Password-Protected Bulk Delete**          |
+| - `RecurringInvoice.php` | - `RecurringInvoiceResource.php` | - `RecurringInvoiceResource.php` | **Password-Protected Bulk Delete**          |
+| - `Item.php`             | - `ItemResource.php`             | - `ItemResource.php`             | **Password-Protected Delete & Bulk Delete** |
+
+
+
+
 
 # Table of Security and Functionality Enhancements.
 
