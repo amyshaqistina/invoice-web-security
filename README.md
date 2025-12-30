@@ -34,13 +34,13 @@ project utilizes **Laravel Filament** for building the admin panel and enhancing
 FOLLOW THIS STEPS: 
 
 1. make sure xammp + mysql start
-3. run kat terminal vs code 👇🏻
+3. run in terminal vs code 👇🏻
 4. Composer update
 5. php artisan filament:upgrade
 6. npm update
 6. npm run dev (if cannot , cntrl c) 
-7. make sure .env ada 
-8. dlm .env
+7. make sure have .env 
+8. in .env
 - tukar APP_URL : http/localhost to http://127.0.0.1:8000/
  
 8. php artisan storage:link
